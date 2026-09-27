@@ -42,7 +42,7 @@ Backend · DB · Auth · Real-time · App · Web · External API · Deployment �
 
 
 
-\![Architecture](./assets/architecture.jpg)
+\![CNED Architecture](https://raw.githubusercontent.com/C-NED/.github/main/profile/assets/architecture.jpg)
 
 
 
