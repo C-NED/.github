@@ -1,6 +1,6 @@
-\# 🚧 CNED
+# 🚧 CNED
 
-\### 도로 노면 장애 대응 AI 통합 서비스
+### 도로 노면 장애 대응 AI 통합 서비스
 
 
 
@@ -18,11 +18,11 @@
 
 
 
-\---
+---
 
 
 
-\## 👤 My Role
+## 👤 My Role
 
 
 
@@ -34,91 +34,109 @@ Backend · DB · Auth · Real-time · App · Web · External API · Deployment �
 
 
 
-\---
+---
 
 
 
-\## 🗺️ Architecture
+## 🗺️ Architecture
+
+```mermaid
+flowchart TD
+    ROMED["🚗 AI Edge Device<br/>ROMED"]
+    API["⚙️ FastAPI Backend"]
+
+    NAVER["🗺️ Naver API"]
+    ITS["🚦 ITS API"]
+
+    DB[("MariaDB")]
+    REDIS[("Redis")]
+
+    DOBY["📱 Doby App<br/>운전자용"]
+    DOROCY["🖥️ Dorocy Web<br/>관리자용"]
+
+    ROMED -->|"도로 위험 정보"| API
+    NAVER --> API
+    ITS --> API
+
+    API --> DB
+    DB -->|"일부 데이터 캐싱"| REDIS
+
+    REDIS --> API
+    DB --> API
+
+    API --> DOBY
+    DOROCY <--> API
+```
 
 
 
-\![CNED Architecture](https://raw.githubusercontent.com/C-NED/.github/main/profile/assets/architecture.jpg)
+---
 
 
 
-\---
+## 🧩 Services
 
 
 
-\## 🧩 Services
-
-
-
-\### ⚙️ Backend
+### ⚙️ Backend
 
 FastAPI · SQLAlchemy · MariaDB · Redis · WebSocket
 
 
 
-\### 📱 Doby
+### 📱 Doby
 
 React Native 기반 운전자 앱
 
 
 
-\### 🖥️ Dorocy
+### 🖥️ Dorocy
 
 Next.js 기반 관리자 웹
 
 
 
-\---
+---
 
 
 
-\## ✨ Key Engineering
+## ✨ Key Engineering
 
 
 
-\- SQLAlchemy 다형성 권한 구조 설계
+- SQLAlchemy 다형성 권한 구조 설계
 
-\- Naver Navigation 응답 구조 분석 및 `pointidx` 기반 매핑
+- Naver Navigation 응답 구조 분석 및 `pointidx` 기반 매핑
 
-\- WebSocket 기반 AI Edge Device 데이터 연동
+- WebSocket 기반 AI Edge Device 데이터 연동
 
-\- FastAPI / MariaDB / Redis 분리 배포
+- FastAPI / MariaDB / Redis 분리 배포
 
-\- GitHub Actions 기반 CI/CD 구축
-
-
-
-\---
+- GitHub Actions 기반 CI/CD 구축
 
 
 
-\## 📦 Repositories
+---
 
 
+
+## 📦 Repositories
 
 | Repository | Description |
-
 |---|---|
-
-| c-ned-backend | FastAPI Backend |
-
-| c-ned-front-app-doby | Driver App |
-
-| c-ned-front-web-dorocy | Admin Web |
+| [`c-ned-backend`](https://github.com/C-NED/c-ned-backend) | FastAPI Backend |
+| [`c-ned-front-app-doby`](https://github.com/C-NED/c-ned-front-app-doby-) | Driver App |
+| [`c-ned-front-web-dorocy`](https://github.com/C-NED/c-ned-front-web-dorocy) | Admin Web |
 
 
 
-\---
+---
 
 
 
-\## 📚 More
+## 📚 More
 
 
 
-상세 설계, 개발 과정 및 트러블슈팅 → \![Portfolio / Notion](https://pouncing-toothpaste-a07.notion.site/CNED-1afbb4312b768015945ee3bf76a6a7d3)
+상세 설계, 개발 과정 및 트러블슈팅 → ![Portfolio / Notion](https://pouncing-toothpaste-a07.notion.site/CNED-1afbb4312b768015945ee3bf76a6a7d3)
 
