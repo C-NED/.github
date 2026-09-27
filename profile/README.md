@@ -42,7 +42,7 @@ Backend · DB · Auth · Real-time · App · Web · External API · Deployment �
 
 
 
-\[간단한 Mermaid 전체 구성도]
+\![Architecture](./assets/architecture.png)
 
 
 
