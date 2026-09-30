@@ -138,5 +138,5 @@ Next.js 기반 관리자 웹
 
 
 
-상세 설계, 개발 과정 및 트러블슈팅 → ![Portfolio / Notion](https://pouncing-toothpaste-a07.notion.site/CNED-1afbb4312b768015945ee3bf76a6a7d3)
+상세 설계, 개발 과정 및 트러블슈팅 → [Portfolio / Notion](https://pouncing-toothpaste-a07.notion.site/CNED-1afbb4312b768015945ee3bf76a6a7d3)
 
