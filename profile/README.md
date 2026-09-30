@@ -25,14 +25,15 @@
 ## 👤 Role
 
 
-
-**AI·IoT 모델 개발을 제외한 서비스 설계·구현·통합 전반**
-
+**lynnkrealm (`bitnuriso`)** — AI·IoT 영역을 제외한 서비스 설계·구현·통합 전반 담당
 
 
 Backend · DB · Auth · Real-time · App · Web · External API · Deployment · CI/CD
 
 
+> AI 모델 및 Edge Device 관련 코드는 팀원 담당 영역으로,
+> 해당 조직의 공개 저장소에는 포함되어 있지 않습니다.  
+> 공개 저장소에는 제가 담당한 서비스 코드 중심으로 정리되어 있습니다.
 
 ---
 
